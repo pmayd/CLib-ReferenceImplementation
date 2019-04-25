@@ -5,33 +5,41 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=129;
 	class ItemIDProvider
 	{
-		nextID=2;
+		nextID=3;
 	};
 	class Camera
 	{
-		pos[]={638.20703,15,4117.0645};
-		dir[]={0.81568533,-0.17364819,0.55181861};
-		up[]={0.14382733,0.98480767,0.097300507};
-		aside[]={0.56033128,-7.4505806e-009,-0.82826853};
+		pos[]={652.87146,16.02808,4126.5693};
+		dir[]={0.010433239,-0.49705544,0.86766225};
+		up[]={0.0059763785,0.86771703,0.49702173};
+		aside[]={0.99993265,4.7061803e-009,-0.012023845};
 	};
 };
 binarizationWanted=0;
 addons[]=
 {
-	"A3_Characters_F"
+	"A3_Characters_F",
+	"A3_Structures_F_Mil_Flags"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=1;
+		items=2;
 		class Item0
 		{
 			className="A3_Characters_F";
 			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="A3_Structures_F_Mil";
+			name="Arma 3 - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -63,7 +71,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=1;
+		items=2;
 		class Item0
 		{
 			dataType="Group";
@@ -92,6 +100,23 @@ class Mission
 			{
 			};
 			id=0;
+		};
+		class Item1
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={648.47101,8.9768047,4136.4258};
+			};
+			side="Empty";
+			flags=5;
+			class Attributes
+			{
+				init="call{this setVariable [""owner"", east]}";
+				name="flagPole";
+			};
+			id=2;
+			type="Flag_Blue_F";
 		};
 	};
 };
