@@ -42,7 +42,7 @@ diag_log "Successfully loaded the CLibRef/flagInteraction module on the client";
 			flagPole, // Object or type which the action should be added to <Object, Array, String> 
 			ACTION_DISTANCE, //  Distance in which the action is visible <Number>
 			{!(_target getVariable ["owner", sideUnknown] isEqualTo side _this);}, // Condition which is evaluated on every frame if player is in range to determine if the action is visible <String, Code>
-			FUNC(captureFlag), // Callback which gets called when the action is activated <Code>
+			{[[], QFUNC(captureFlag), 2, false] call CFUNC(remoteExec); }, // Callback which gets called when the action is activated <Code>
 			["arguments", [flagPole], "shortcut", "User1","radius", 5, "priority", 99] //  Optional named parameters <Array>
 		] call CFUNC(addAction);
 	};

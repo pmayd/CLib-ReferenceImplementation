@@ -24,5 +24,6 @@ params
 if (_flag isEqualTo objNull) exitWith {false};
 
 _flag setFlagTexture "\A3\Data_F\Flags\Flag_red_CO.paa";
+_flag setVariable ["owner", side player, true];
 
 true
